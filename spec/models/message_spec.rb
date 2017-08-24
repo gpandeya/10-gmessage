@@ -35,26 +35,25 @@ RSpec.describe Message, type: :model do
               
         end
         
-        # it 'validate message receiver and sender' do
+        it 'validate message receiver and sender' do
             
-        #     from_user = User.first
-        #     to_user = User.second
+            from_user = User.first
+            to_user = User.second
           
-        #     m = Message.new()
+            m = Message.new()
             
-        #     m.from_id = from_user.id
-        #     m.to_id = to_user.id
-        #     m.subject='test'
-        #     m.body = 'test body'
+            m.from_id = from_user.id
+            m.to_id = to_user.id
+            m.subject='test'
+            m.body = 'test body'
 
-        #     m.save!
+            m.save!
           
-        #     expect(m.is_a?(Message)).to be true
-        #     expect(m.from_id).to eql(from_user.id)
-        #     expect(m.to_id).to eql(to_user.id)
-        #     expect(m.subject).to eql('test')
+            expect(m.sender.email).to eql(from_user.email)
+            expect(m.receiver.email).to eql(to_user.email)
+          
               
-        # end
+        end
     
   end
   
