@@ -5,6 +5,7 @@ class CreateMessages < ActiveRecord::Migration[5.1]
         t.bigint :to_id, index: true, null: false
         t.string :subject, null: false
         t.text :body
+        
     end
     
     add_foreign_key :messages, :users, column: :from_id, primary_key: :id

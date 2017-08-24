@@ -52,7 +52,6 @@ RSpec.describe Message, type: :model do
             expect(m.sender.email).to eql(from_user.email)
             expect(m.receiver.email).to eql(to_user.email)
           
-              
         end
     
   end

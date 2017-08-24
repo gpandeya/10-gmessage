@@ -2,9 +2,12 @@
   <% if @is_logged_in %>
     <li><%= @user.email %></li>
     <li><a href="/users/edit">Profile</a></li>
+    <li><a href="/messages">Inbox</a></li>
+    <li><a href="/users/sign_up">Sent</a></li>
     <li><%= link_to "Log Off", destroy_user_session_path, method: :delete %></li>
   <% else %>
     <li><a href="/users/sign_in">Sign In</a></li>
     <li><a href="/users/sign_up">Sign Up</a></li>
+  
   <% end %>
 </ul>
