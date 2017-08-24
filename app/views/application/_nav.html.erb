@@ -1,0 +1,8 @@
+<ul>
+  <li><a href="/users/sign_in">Sign In</a></li>
+  <li><a href="/users/sign_up">Sign Up</a></li>
+  <li><%= link_to "Log Off", destroy_user_session_path, method: :delete %></li>
+  <% if @is_logged_in %>
+    <li><%= @user.email %></li>
+  <% end %>
+</ul>
